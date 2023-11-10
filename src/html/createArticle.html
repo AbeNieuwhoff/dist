@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article editor</title>
+    <link rel="stylesheet" href="./createArticle.css" />
+    <script type="module" src="./createArticle.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Artcile editor</h1>
+    </header>
+    <main id="Main">
+      <h1 id="Title">Create article</h1>
+      <fieldset>
+      <legend>Meta data</legend>
+        <form id="form1">
+            <div id="form" class="form">
+                <p>
+                    <label for="artTitle">Title</label>
+                </p>
+                <p>
+                    <input type="text" name="artTitle" id="artTitle" placeholder="Title" size="50px" required>
+                </p>
+                <p>
+                    <label for="URL">Url</label>
+                </p>
+                <p>
+                    <input type="url" name="URL" id="URL" placeholder="URL" size="50px" required>
+                </p>
+                <p>
+                    <label for="Summary">Summary</label>
+                </p>
+                <p>
+                    <textarea name="Summary" placeholder="Summary" id="Summary" required></textarea>
+                </p>
+                <p>
+                    <label for="NewsSource">Choose a News source: </label>
+                </p>
+                <p>
+                    <select name="NewsSource" id="NewsSource" width="50px" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="SpacePolicyOnline.com">SpacePolicyOnline.com</option>
+                        <option value="SpaceNews">SpaceNews</option>
+                        <option value="TheLaunchPad">The Launch Pad</option>
+                        <option value="NASA">NASA</option>
+                        <option value="Arstechnica">Arstechnica</option>
+                        <option value="EuropeanSpaceflight">European Spaceflight</option>
+                        <option value="Teslarati">Teslarati</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="PublishDate">Publish date</label>
+                </p>
+                <p>
+                    <input type="date" name="PublishDate" id="PublishDate" required>
+                </p>
+                <p>
+                    <label for="HasEvent">Has Event</label>
+                </p>
+                <p>
+                    <input name="HasEvent" id="HasEvent" type="checkbox">
+                </p>
+                <p>
+                    <label for="HasLaunch">Has Launch</label>
+                </p>
+                <p>
+                    <input name="HasLaunch" id="HasLaunch" type="checkbox">
+                </p>
+                <p>
+                    <input type="submit" id="submitbtn" value="save new article">
+                </p>
+            </div>
+
+          
+        </form>
+      </fieldset>
+
+      <div>
+        <p>
+            <label id="success"></label>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <a href="/">Return to main page</a>
+    </footer>
+  </body>
+</html>
