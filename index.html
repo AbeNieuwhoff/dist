@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spaceflight News</title>
+    
+    
+    <script type="module" crossorigin src="/assets/index-e4ff69e0.js"></script>
+    <link rel="stylesheet" href="/assets/index-1cf06d54.css">
+  </head>
+  <body>
+    <div class="gridContainer">
+      <header class="header" style="background-image: url(/assets/head-8c13d680.jpg);">
+        <div class="title">
+          <h1>Spaceflight News</h1>
+          <p id="cntdwn"> </p>
+        </div>
+      </header>
+      <nav class="filters" id="filter">
+        <h3>Filters</h3>
+        <form>
+          <div id="FilterDiv">
+            <div>
+              <fieldset class="filterSearch">
+                <legend>Text search</legend>
+                <input id="searchArt" type="text" value="" placeholder="Enter search query"/>
+                <button id="searchButton">search</button>
+              </fieldset>
+            </div>
+
+            <div>
+              <fieldset class="filterSearch">
+                <legend>Events & Launches</legend>
+                <div>
+                  <input name="hasEvent" id="hasEvent" type="checkbox" />
+                  <label for="hasEvent">Has Event</label>
+                </div>
+                <div>
+                  <input name="hasLaunch" id="hasLaunch" type="checkbox" />
+                  <label for="hasLaunch">Has Launch</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div>
+              <fieldset id="articleType" class="filterSearch">
+                <legend>Article type</legend>
+                <div>
+                  <input name="type" id="article" type="radio" value="article" checked />
+                  <label for="article">Articles</label>
+                </div>
+                <div>
+                  <input name="type" id="blog" type="radio" value="blog" />
+                  <label for="blog">Blogs</label>
+                </div>
+                <div>
+                  <input name="type" id="report" type="radio" value="report" />
+                  <label for="report">Reports</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div>
+              <fieldset id="articleDate" class="filterSearch">
+                <legend>Article date</legend>
+                <input
+                  type="date"
+                  id="dateArt"
+                />
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </nav>
+      <main class="main">
+        <div id="countArticles">
+          <p id="countArticlesText">Articles from news sites:</p>
+          <div id="countArticlesContainer"></div>
+        </div>
+        <div id="showArticle"></div>
+        <section id="backgroundimage-info"></section>
+      </main>
+      <aside class="aside">
+        <div id="showMostRead"></div>
+        <div id="recentLaunch">
+          <h3>Recent SpaceX Launch</h3>
+          <img id="launchImg" alt="launch-image" />
+          <figcaption id="launchImgTekst"></figcaption>
+        </div>
+      </aside>
+      <footer class="footer">
+        <p> The Spaceflight News web site displays space related articles from a
+          number of web sites </p>
+      </footer>
+    </div>
+
+    <aside aria-label="editBTN">
+      <div id="createArticleIcon">
+        <a href="createArticle.html">
+          <img src="/assets/CreateArticle-d5ab1766.webp" alt="create article" />
+        </a>
+      </div>
+    </aside>
+
+    <template id="artTemp">
+      <div class="article">
+        <div class="articleImg">
+          <img class="articlePicture" aria-label="article" />
+        </div>
+        <div class="articleContent">
+          <a href="#" target="_blank">
+            <h3 class="Title"></h3>
+          </a>
+          <p class="articleSummary"></p>
+          <p class="articleDet">
+            Source:
+            <span class="articleSrc"></span>
+            Last updated:
+            <span class="articleLastupdate"></span>
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <template id="bigArtTemp">
+      <div class="bigArticle">
+        <img class="bigArticleImg" alt="bigArticleImg" />
+        <a href="#" target="_blank">
+          <h3 class="bigTitle">Title</h3>
+        </a>
+        <h3 class="bigArtDate">Date</h3>
+      </div>
+    </template>
+
+    <!-- <template id="most-read-item">
+      <div class="most-read-rank"></div>
+      <a href="#" class="most-read-link"></a>
+    </template> -->
+  </body>
+</html>
